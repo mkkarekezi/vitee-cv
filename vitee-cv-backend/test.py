@@ -8,7 +8,7 @@ def main(api_key, resume_path):
     uploaded = client.files.upload(file=resume_path)
     print("✓ Uploaded!")
 
-    chat = client.chats.create(model="gemini-2.0-flash-exp")
+    chat = client.chats.create(model="gemini-2.5-flash-lite")
 
     chat.send_message([
         "Analyze this resume and be ready to answer questions about it.",
@@ -27,6 +27,8 @@ def main(api_key, resume_path):
         print("\n")
 
 if __name__ == "__main__":
-    API_KEY = "AIzaSyDICWb5D1hUp037p6bkkY4dn0THzmaHmm8"
+    API_KEY = "AIzaSyAB-jaYMrM0PR6CyK-JE02cD6p1hVG3twg"
     RESUME_PATH = "resume-sample.pdf"
     main(API_KEY, RESUME_PATH)
+
+
