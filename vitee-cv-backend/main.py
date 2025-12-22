@@ -21,6 +21,7 @@ app.add_middleware(
 
 
 API_KEY = os.getenv("GOOGLE_API_KEY")
+client = genai.Client(api_key=API_KEY)
 sessions = {}
 
 class ChatRequest(BaseModel):
