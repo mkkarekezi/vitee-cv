@@ -5,6 +5,9 @@ from google import genai
 import uuid
 import tempfile
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
@@ -16,9 +19,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-API_KEY = "AIzaSyAB-jaYMrM0PR6CyK-JE02cD6p1hVG3twg"
-client = genai.Client(api_key=API_KEY)
 
+API_KEY = os.getenv("GOOGLE_API_KEY")
 sessions = {}
 
 class ChatRequest(BaseModel):
