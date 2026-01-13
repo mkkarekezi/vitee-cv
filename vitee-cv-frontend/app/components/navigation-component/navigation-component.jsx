@@ -3,18 +3,8 @@ import "./navigation-component.css";
 export function Navigation() {
   return (
     <nav className="navigation">
-      <Link href="/" className="navigation-links">
-        vitee-cv
-        <img
-          src="/icons/read-cv-logo.svg"
-          alt=""
-          className="navigation-links-icon"
-        />
-      </Link>
-
       <div className="navigation-wrapper">
         <Link href="/" className="navigation-links">
-          web portfolio
           <img
             src="/icons/globe-simple.svg"
             alt=""
@@ -22,7 +12,6 @@ export function Navigation() {
           />
         </Link>
         <Link href="/" className="navigation-links">
-          source code
           <img
             src="/icons/github-logo.svg"
             alt=""
@@ -30,6 +19,13 @@ export function Navigation() {
           />
         </Link>
       </div>
+      <Link href="/" className="navigation-links">
+        <img
+          src="/icons/palette.svg"
+          alt=""
+          className="navigation-links-icon"
+        />
+      </Link>
     </nav>
   );
 }

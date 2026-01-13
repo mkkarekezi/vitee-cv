@@ -41,8 +41,10 @@ async def upload_resume(file: UploadFile = File(...)):
         uploaded = client.files.upload(file=tmp_path)
         chat = client.chats.create(model="gemini-2.5-flash-lite")
         chat.send_message([
-            "Analyze this resume and answer questions about it concisely.",
-            uploaded
+        """You are a resume analysis assistant. ONLY answer questions about this resume. 
+        If asked anything unrelated to the resume (general knowledge, other topics, etc.), 
+        politely decline and redirect to resume-related questions.""",
+        uploaded
         ])
         
         sessions[session_id] = chat

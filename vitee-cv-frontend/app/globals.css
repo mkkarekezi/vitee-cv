@@ -1,7 +1,7 @@
 :root {
   /* using 1.20 minor thirs in rem*/
 
-  --fs-small: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+  --fs-small: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 
   --fs-heading-small: clamp(1rem, 0.8544rem + 0.728vw, 1.728rem);
 

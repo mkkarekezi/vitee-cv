@@ -74,15 +74,26 @@ export function ChatbotComponent() {
             {msg.text}
           </div>
         ))}
+
+        {loading && (
+          <div className="message bot loading">
+            <img src="/icons/spinner-gap.svg" alt="" className="loading-icon" />
+            <span>loading...</span>
+          </div>
+        )}
       </div>
 
       <form className="chatbot-input" onSubmit={sendMessage}>
         <input
-          className="chatbot-input-type"
+          className={`chatbot-input-type ${!sessionId ? "no-resume" : ""}`}
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="ask questions about this resume"
+          placeholder={
+            !sessionId
+              ? "First upload resume"
+              : "Ask questions about this resume"
+          }
           disabled={!sessionId || loading}
         />
 
