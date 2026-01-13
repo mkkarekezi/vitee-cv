@@ -14,7 +14,7 @@
     flex-direction: column;
     gap: 16px;
     padding: clamp(1rem, 0.8rem + 1vw, 2rem)
-      clamp(0.5rem, -3.7rem + 21vw, 31.5rem);
+      clamp(0.25rem, -5.25rem + 27.5vw, 27.75rem);
     border-radius: 8px;
     background-color: #faf9f5;
     background-image: linear-gradient(

@@ -14,7 +14,7 @@ export function ChatbotComponent() {
     formData.append("file", file);
 
     try {
-      const res = await fetch(" http://127.0.0.1:8000/upload", {
+      const res = await fetch(" https://vitee-cv-backend.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -38,7 +38,7 @@ export function ChatbotComponent() {
     setLoading(true);
 
     try {
-      const res = await fetch(" http://127.0.0.1:8000/chat", {
+      const res = await fetch(" https://vitee-cv-backend.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: sessionId, message: userMsg }),
@@ -57,9 +57,12 @@ export function ChatbotComponent() {
 
   async function clearChat() {
     if (sessionId) {
-      await fetch(` http://127.0.0.1:8000/session/${sessionId}`, {
-        method: "DELETE",
-      });
+      await fetch(
+        `https://vitee-cv-backend.onrender.com/session/${sessionId}`,
+        {
+          method: "DELETE",
+        }
+      );
     }
     setSessionId(null);
     setMessages([]);
