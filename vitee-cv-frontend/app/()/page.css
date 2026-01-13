@@ -23,6 +23,7 @@
       ),
       url("/media/test.png");
     background-size: contain;
+    background-repeat: no-repeat;
     /* background-position: center; */
 
     .home-wrapper-title {
