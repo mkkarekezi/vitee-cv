@@ -1,0 +1,30 @@
+.navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .navigation-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .navigation-links {
+    padding-right: 16px;
+    border-right: 1px solid #faf9f5;
+    display: flex;
+    flex-direction: row;
+    font-size: var(--fs-small);
+    gap: 16px;
+    color: #faf9f5;
+    align-items: center;
+    text-transform: capitalize;
+
+    .navigation-links-icon {
+      filter: brightness(0) saturate(100%) invert(99%) sepia(31%) saturate(889%)
+        hue-rotate(302deg) brightness(114%) contrast(96%);
+      height: 13px;
+    }
+  }
+}

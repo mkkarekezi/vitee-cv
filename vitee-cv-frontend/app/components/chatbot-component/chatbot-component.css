@@ -1,0 +1,88 @@
+.chatbot {
+  flex-grow: 1;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .chatbot-input {
+    background-image: repeating-linear-gradient(
+        0deg,
+        black 0,
+        rgb(0, 0, 0, 0.15) 10px,
+        transparent 10px,
+        transparent 15px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        black 0,
+        rgb(0, 0, 0, 0.15) 10px,
+        transparent 10px,
+        transparent 15px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        black 0,
+        rgb(0, 0, 0, 0.15) 10px,
+        transparent 10px,
+        transparent 15px
+      ),
+      repeating-linear-gradient(
+        270deg,
+        black 0,
+        rgb(0, 0, 0, 0.15) 10px,
+        transparent 10px,
+        transparent 15px
+      );
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 12px;
+
+    .chatbot-input-type {
+      flex-grow: 1;
+      font-size: 16px;
+    }
+
+    .chatbot-input-type::placeholder {
+      font-size: 16px;
+      color: rgb(0, 0, 0, 0.5);
+      width: 100%;
+      display: block;
+    }
+
+    .chatbot-input-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      .chatbot-input-wrapper-action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        .chatbot-input-action-icon {
+          width: fit-content;
+          height: 24px;
+          line-height: 1;
+        }
+      }
+
+      .chatbot-input-send-icon {
+        width: fit-content;
+        height: 24px;
+        line-height: 1;
+      }
+    }
+  }
+}

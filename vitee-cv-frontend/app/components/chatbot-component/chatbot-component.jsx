@@ -1,5 +1,5 @@
 "use client";
-import "../styles/chatbot-component.css";
+import "./chatbot-component.css";
 import { useState } from "react";
 
 export function ChatbotComponent() {
@@ -67,10 +67,8 @@ export function ChatbotComponent() {
   }
 
   return (
-    <div className="chatbot-component">
-      <h1>hi, there i’m vitee your ai hiring assist</h1>
-
-      <div className="messages">
+    <div className="chatbot">
+      <div className="chatbot-messages">
         {messages.map((msg, i) => (
           <div key={i} className={`message ${msg.role}`}>
             {msg.text}
@@ -78,43 +76,55 @@ export function ChatbotComponent() {
         ))}
       </div>
 
-      <form className="chatbot-component-chat" onSubmit={sendMessage}>
-        <label className="chatbot-component-chat-upload">
-          <img src="/icons/paperclip.svg" alt="" />
-          upload resume
-          <input
-            type="file"
-            accept=".pdf"
-            style={{ display: "none" }}
-            onChange={(e) =>
-              e.target.files[0] && uploadResume(e.target.files[0])
-            }
-            disabled={loading}
-          />
-        </label>
-        <button
-          type="button"
-          className="chatbot-component-chat-newchat"
-          onClick={clearChat}
-          disabled={loading}
-        >
-          <img src="/icons/chat.svg" alt="" />
-          new chat
-        </button>
-
+      <form className="chatbot-input" onSubmit={sendMessage}>
         <input
+          className="chatbot-input-type"
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="what do you want to know about this resume"
+          placeholder="ask questions about this resume"
           disabled={!sessionId || loading}
         />
-        <button
-          type="submit"
-          disabled={!sessionId || loading || !message.trim()}
-        >
-          <img src="/icons/arrow-circle-up-fill.svg" alt="" />
-        </button>
+
+        <div className="chatbot-input-wrapper">
+          <div className="chatbot-input-wrapper-action">
+            <label>
+              <img
+                src="/icons/paperclip-fill.svg"
+                alt=""
+                className="chatbot-input-action-icon"
+              />
+              <input
+                type="file"
+                accept=".pdf"
+                style={{ display: "none" }}
+                onChange={(e) =>
+                  e.target.files[0] && uploadResume(e.target.files[0])
+                }
+                disabled={loading}
+              />
+            </label>
+
+            <button type="button" onClick={clearChat} disabled={loading}>
+              <img
+                src="/icons/chats-fill.svg"
+                alt=""
+                className="chatbot-input-action-icon"
+              />
+            </button>
+          </div>
+
+          <button
+            type="submit"
+            disabled={!sessionId || loading || !message.trim()}
+          >
+            <img
+              src="/icons/arrow-circle-up-fill.svg"
+              alt=""
+              className="chatbot-input-send-icon"
+            />
+          </button>
+        </div>
       </form>
     </div>
   );

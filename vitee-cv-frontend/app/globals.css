@@ -1,0 +1,44 @@
+:root {
+  /* using 1.20 minor thirs in rem*/
+
+  --fs-small: clamp(0.875rem, 0.825rem + 0.25vw, 1.125rem);
+
+  --fs-heading-small: clamp(1rem, 0.8544rem + 0.728vw, 1.728rem);
+
+  --pd--wrapper: clamp(0.5rem, 0.2rem + 1.5vw, 2rem);
+}
+
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ol,
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+}
+textarea {
+  white-space: revert;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #faf9f5;
+  font-family: var(--font-Geist);
+  font-weight: 400;
+  color: black;
+}
