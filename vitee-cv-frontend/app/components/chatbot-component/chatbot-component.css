@@ -122,15 +122,16 @@
 
         .chatbot-input-action-icon {
           width: fit-content;
-          height: 24px;
+          height: var(--size-icon);
+          width: var(--size-icon);
           line-height: 1;
         }
       }
 
       .chatbot-input-send-icon {
         width: fit-content;
-        height: 24px;
-        line-height: 1;
+        height: var(--size-icon);
+        width: var(--size-icon);
       }
     }
   }

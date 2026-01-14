@@ -4,6 +4,8 @@
   --fs-small: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
 
   --pd--wrapper: clamp(0.5rem, 0.2rem + 1.5vw, 2rem);
+
+  --size-icon: clamp(1.25rem, 1.1rem + 0.75vw, 2rem);
 }
 
 *:where(:not(iframe, canvas, img, svg, video):not(svg *)) {

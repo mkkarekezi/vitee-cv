@@ -22,6 +22,8 @@
       filter: brightness(0) saturate(100%) invert(99%) sepia(31%) saturate(889%)
         hue-rotate(302deg) brightness(114%) contrast(96%);
       height: 20px;
+      height: var(--size-icon);
+      width: var(--size-icon);
     }
   }
 }

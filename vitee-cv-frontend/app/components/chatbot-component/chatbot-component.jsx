@@ -104,7 +104,7 @@ export function ChatbotComponent() {
           <div className="chatbot-input-wrapper-action">
             <label>
               <img
-                src="/icons/paperclip-fill.svg"
+                src="/icons/paperclip-horizontal.svg"
                 alt=""
                 className="chatbot-input-action-icon"
               />
@@ -121,7 +121,7 @@ export function ChatbotComponent() {
 
             <button type="button" onClick={clearChat} disabled={loading}>
               <img
-                src="/icons/chats-fill.svg"
+                src="/icons/chat-centered-slash.svg"
                 alt=""
                 className="chatbot-input-action-icon"
               />
