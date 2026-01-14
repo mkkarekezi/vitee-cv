@@ -7,6 +7,8 @@
   flex-grow: 1;
 
   .chatbot-messages {
+    max-height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 16px;
