@@ -3,6 +3,9 @@ import "./navigation-component.css";
 export function Navigation() {
   return (
     <nav className="navigation">
+      <Link href="/" className="navigation-links">
+        vitee-cv
+      </Link>
       <div className="navigation-wrapper">
         <Link href="/" className="navigation-links">
           <img
@@ -19,13 +22,6 @@ export function Navigation() {
           />
         </Link>
       </div>
-      <Link href="/" className="navigation-links">
-        <img
-          src="/icons/palette.svg"
-          alt=""
-          className="navigation-links-icon"
-        />
-      </Link>
     </nav>
   );
 }

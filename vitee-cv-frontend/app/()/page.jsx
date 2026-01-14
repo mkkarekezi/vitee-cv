@@ -9,7 +9,7 @@ export default function Home() {
       <main className="home-wrapper">
         <h1 className="home-wrapper-title">
           <img src="/icons/asterisk.svg" alt="" />
-          hi, there i’m vitee cvI'm ready to help you plan, study, bring.
+          hi, i’m your ai recruitment assistant.
         </h1>
         <ChatbotComponent />
       </main>

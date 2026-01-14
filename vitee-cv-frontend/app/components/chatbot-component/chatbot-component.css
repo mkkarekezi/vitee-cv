@@ -1,12 +1,10 @@
 .chatbot {
-  flex-grow: 1;
-  height: 100%;
-  overflow: hidden;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  flex-grow: 1;
 
   .chatbot-messages {
     display: flex;
@@ -14,8 +12,8 @@
     gap: 16px;
     padding-bottom: 32px;
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 
     .message.user {
       background-color: #007bff;
