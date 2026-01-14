@@ -19,15 +19,19 @@ const Geist = localFont({
   display: "swap",
 });
 
+export const metadata = {
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${Geist.variable}`}>
-      <head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-        />
-      </head>
+      <head></head>
       <body>{children}</body>
     </html>
   );

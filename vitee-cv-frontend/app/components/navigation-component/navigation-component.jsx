@@ -4,6 +4,11 @@ export function Navigation() {
   return (
     <nav className="navigation">
       <Link href="/" className="navigation-links">
+        <img
+          src="/icons/read-cv-logo.svg"
+          alt=""
+          className="navigation-links-icon"
+        />
         vitee-cv
       </Link>
       <div className="navigation-wrapper">
