@@ -19,10 +19,6 @@ const Geist = localFont({
   display: "swap",
 });
 
-input, textarea, select {
-  font-size: 16px !important;
-  touch-action: manipulation;
-}
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${Geist.variable}`}>
