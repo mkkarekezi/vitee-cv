@@ -35,6 +35,13 @@ html {
   font-size: 62.5%;
 }
 
+input,
+textarea,
+select {
+  font-size: 16px !important;
+  touch-action: manipulation;
+}
+
 body {
   font-size: 1.6rem;
 

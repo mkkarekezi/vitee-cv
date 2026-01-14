@@ -22,8 +22,8 @@
       height: 20px;
       height: var(--size-icon);
       width: var(--size-icon);
-      filter: brightness(0) saturate(100%) invert(97%) sepia(13%) saturate(455%)
-        hue-rotate(327deg) brightness(112%) contrast(95%);
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7500%) hue-rotate(228deg) brightness(108%) contrast(105%);
     }
   }
 }
