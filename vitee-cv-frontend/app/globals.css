@@ -29,6 +29,11 @@ table {
 }
 textarea {
   white-space: revert;
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px;
 }
 
 html {
