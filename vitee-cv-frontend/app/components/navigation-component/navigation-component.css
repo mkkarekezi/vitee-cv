@@ -18,6 +18,10 @@
     cursor: pointer;
     color: #faf9f5;
     font-size: var(--fs-small);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
     .navigation-links-icon {
       height: 20px;
       height: var(--size-icon);
