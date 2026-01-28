@@ -14,7 +14,7 @@ export function ChatbotComponent() {
     formData.append("file", file);
 
     try {
-      const res = await fetch(" https://vitee-cv-backend.onrender.com/upload", {
+      const res = await fetch("https://vitee-cv.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
@@ -38,7 +38,7 @@ export function ChatbotComponent() {
     setLoading(true);
 
     try {
-      const res = await fetch(" https://vitee-cv-backend.onrender.com/chat", {
+      const res = await fetch("https://vitee-cv.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ session_id: sessionId, message: userMsg }),
@@ -57,12 +57,9 @@ export function ChatbotComponent() {
 
   async function clearChat() {
     if (sessionId) {
-      await fetch(
-        `https://vitee-cv-backend.onrender.com/session/${sessionId}`,
-        {
-          method: "DELETE",
-        }
-      );
+      await fetch(`https://vitee-cv.onrender.com/session/${sessionId}`, {
+        method: "DELETE",
+      });
     }
     setSessionId(null);
     setMessages([]);
